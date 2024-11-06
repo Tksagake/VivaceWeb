@@ -5,22 +5,28 @@ import { Award, Heart, Target } from 'lucide-react';
 const About = () => {
   const team = [
     {
-      name: 'Sarah Johnson',
+      name: 'Malcolm W. Sikolia',
       role: 'Founder & Director',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      bio: 'Concert pianist with over 20 years of teaching experience.',
+      image: 'src/components/IMG_0041.JPG',
+      bio: 'A musical mastermind with the touch of technology, especially in digital audio workstations and notation software applications',
     },
     {
-      name: 'Michael Chen',
+      name: 'Sir Elvis A. Salano',
       role: 'Lead Instructor',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      bio: 'Classical violinist and composer with international performance experience.',
+      image: 'src/components/sirlano.jpg',
+      bio: 'A vast music scholar and researcher who opted into the Music teaching sector. He is currently the Head of Music Department in Nova Pioneer School',
     },
     {
-      name: 'Emma Rodriguez',
-      role: 'Vocal Coach',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      bio: 'Professional opera singer and vocal technique specialist.',
+      name: 'Ms Norah Pamela Ondiek',
+      role: 'Quality and Assurance Officer',
+      image: 'src/components/pamnorah.jpg',
+      bio: 'A dedicated educator of music theory and musical instrumentation. She is currently the Head of Music Department in Rangala Girls School',
+    },
+    {
+      name: 'Mr Tom B Brown',
+      role: 'Head of Instrumental Studies',
+      image: 'src/components/sir tom.webp',
+      bio: 'A dedicated educator of music theory and musical instrumentation. Currently doing his Major in Music at Maseno University',
     },
   ];
 
@@ -46,7 +52,7 @@ const About = () => {
             {
               icon: <Target className="h-8 w-8" />,
               title: 'Vision',
-              description: 'To be the leading music education institution, inspiring the next generation of musicians.',
+              description: 'To be the leading online music education institution, inspiring the next generation of musicians.',
             },
             {
               icon: <Heart className="h-8 w-8" />,
@@ -99,10 +105,11 @@ const About = () => {
                 className="bg-white rounded-xl shadow-lg overflow-hidden"
               >
                 <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-64 object-cover"
-                />
+  src={member.image}
+  alt={member.name}
+  className="w-48 h-48 object-cover rounded-full mx-auto mb-4" // Adjust width, height, and margins
+/>
+
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
                   <p className="text-indigo-600 mb-4">{member.role}</p>

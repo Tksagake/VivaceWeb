@@ -5,19 +5,24 @@ import { Building2, Award, Handshake } from 'lucide-react';
 const Partners = () => {
   const partners = [
     {
-      name: 'Symphony Orchestra',
-      logo: 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+      name: 'DiversiWorks Times Group',
+      logo: 'src/components/20231028_103847_0000.png',
       description: 'Providing performance opportunities and professional mentorship.',
     },
     {
-      name: 'Music Academy International',
-      logo: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-      description: 'Collaborative programs and student exchange opportunities.',
+      name: 'MuseScore',
+      logo: 'https://pbs.twimg.com/media/GIaL8FyWYAA46lA.jpg',
+      description: 'Collaborating on music education programs and workshops.',
     },
     {
-      name: 'Global Music Foundation',
-      logo: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-      description: 'Supporting music education initiatives and scholarships.',
+      name: 'Kenya Music Festival',
+      logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfMYdBxbSPr59hGThTZTYdx2PSV8UWHNGSfg&s',
+      description: 'Sponsoring music competitions and talent showcases.',
+    },
+    {
+      name: 'Vivace Music Society',
+      logo: 'src/components/VIVACE MUSIC SOCIETY.png',
+      description: 'Supporting music education initiatives and community outreach.',
     },
   ];
 
@@ -65,10 +70,10 @@ const Partners = () => {
               className="bg-white rounded-xl shadow-lg overflow-hidden"
             >
               <img
-                src={partner.logo}
-                alt={partner.name}
-                className="w-full h-48 object-cover"<boltAction type="file" filePath="src/pages/Partners.tsx">
-              />
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="w-full h-48 object-cover"
+                />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{partner.name}</h3>
                 <p className="text-gray-600">{partner.description}</p>

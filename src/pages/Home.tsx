@@ -46,13 +46,13 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="relative text-center text-white px-4 sm:px-6 lg:px-8"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Welcome to Vivace</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Welcome to Vivace Music School</h1>
           <p className="text-xl md:text-2xl mb-8">Where Music Comes to Life</p>
           <Link
             to="/contact"
             className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full text-lg font-medium transition-colors duration-300"
           >
-            Start Your Journey
+            Start Your Musical Journey Today!
           </Link>
         </motion.div>
       </section>

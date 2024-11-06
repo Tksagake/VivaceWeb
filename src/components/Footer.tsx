@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Music2 className="h-8 w-8 text-indigo-400" />
-              <span className="font-bold text-xl">Vivace</span>
+              <span className="font-bold text-xl">Vivace Music School Kenya</span>
             </div>
             <p className="text-gray-400">
               Inspiring musical excellence through education and innovation.
@@ -29,17 +29,18 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Contact Info</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>123 Music Avenue</li>
-              <li>New York, NY 10001</li>
-              <li>Phone: (555) 123-4567</li>
-              <li>Email: info@vivace.com</li>
+              <li>Nairobi, Kenya</li>
+              <li>P.O. Box 52000-00200</li>
+              <li>Phone: (254) 794-068-508</li>
+              <li>Phone: (254) 795-958-448</li>
+              <li>Email: vivacemusicke@gmail.com</li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-semibold text-lg mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://web.facebook.com/VivaceOnlineMusicSchoolKenya/?_rdc=1&_rdr#" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="h-6 w-6" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -54,6 +55,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} Vivace Music School. All rights reserved.</p>
+          <p> Powered by DiversiWorks Times Group</p>
         </div>
       </div>
     </footer>

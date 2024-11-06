@@ -9,11 +9,13 @@ const Contact = () => {
     subject: '',
     message: '',
   });
+  const [submitted, setSubmitted] = useState(false); // Track submission status
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
+    // Handle form submission (without a backend)
     console.log('Form submitted:', formData);
+    setSubmitted(true); // Set form as submitted
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -44,20 +46,20 @@ const Contact = () => {
             {
               icon: <Phone className="h-8 w-8" />,
               title: 'Phone',
-              info: '(555) 123-4567',
+              info: '+254-794-068-508, +254-795-958-448',
               subInfo: 'Mon-Fri 9am-6pm',
             },
             {
               icon: <Mail className="h-8 w-8" />,
               title: 'Email',
-              info: 'info@vivace.com',
+              info: 'vivacemusicke@gmail.com',
               subInfo: 'We reply within 24 hours',
             },
             {
               icon: <MapPin className="h-8 w-8" />,
               title: 'Location',
-              info: '123 Music Avenue',
-              subInfo: 'New York, NY 10001',
+              info: 'Juja Square',
+              subInfo: 'Juja, Kenya',
             },
           ].map((item, index) => (
             <motion.div
@@ -83,73 +85,85 @@ const Contact = () => {
           className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8"
         >
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {submitted ? (
+            <div className="text-center text-green-600">
+              <h3 className="text-xl font-semibold mb-4">Thank you for reaching out!</h3>
+                <p>
+          We have received your message and our team will get back to you shortly
+
+           In the meantime, feel free to explore our website for more information about our programs and services.
+
+          </p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    required
+                  />
+                </div>
+              </div>
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Name
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  Subject
                 </label>
                 <input
                   type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                   required
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  Message
                 </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
                   onChange={handleChange}
+                  rows={6}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                   required
-                />
+                ></textarea>
               </div>
-            </div>
-            <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={6}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors duration-300 flex items-center justify-center space-x-2"
-            >
-              <Send className="h-5 w-5" />
-              <span>Send Message</span>
-            </button>
-          </form>
+              <button
+                type="submit"
+                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors duration-300 flex items-center justify-center space-x-2"
+              >
+                <Send className="h-5 w-5" />
+                <span>Send Message</span>
+              </button>
+            </form>
+          )}
         </motion.div>
       </section>
     </div>

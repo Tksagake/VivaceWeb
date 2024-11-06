@@ -8,43 +8,49 @@ const Services = () => {
       icon: <Music className="h-8 w-8" />,
       title: 'Instrumental Lessons',
       description: 'One-on-one instruction in piano, violin, guitar, and more.',
-      price: 'From $60/hour',
+      price: 'From Ksh 500/session',
     },
     {
       icon: <Mic className="h-8 w-8" />,
       title: 'Vocal Training',
       description: 'Professional vocal coaching for all genres and levels.',
-      price: 'From $55/hour',
+      price: 'From Ksh 500/session',
+    },
+    {
+      icon: <Users className="h-8 w-8" />,
+      title: 'Individual Classes',
+      description: 'Solo and tailored learning experiences in music theory.',
+      price: 'From Ksh 500/person/week',
     },
     {
       icon: <Users className="h-8 w-8" />,
       title: 'Group Classes',
-      description: 'Collaborative learning experiences in various instruments.',
-      price: 'From $40/person',
+      description: 'Collaborative learning experiences in music theory.',
+      price: 'From Ksh 350/person/week/group',
     },
     {
       icon: <BookOpen className="h-8 w-8" />,
       title: 'Music Theory',
       description: 'Comprehensive understanding of musical concepts.',
-      price: 'From $50/hour',
+      price: 'From Ksh 500/session',
     },
   ];
 
   const events = [
     {
-      title: 'Spring Concert Series',
-      date: 'March 15-30, 2024',
-      description: 'Showcase your progress in our seasonal concert series.',
+      title: 'Harmonize and Groove II 2024',
+      date: 'December 2-6, 2024',
+      description: 'Learn key concepts of Music theory.',
     },
     {
-      title: 'Summer Music Camp',
-      date: 'July 1-15, 2024',
-      description: 'Intensive two-week program for young musicians.',
+      title: 'Comprehensive Music Course',
+      date: 'January 5- March 24, 2025',
+      description: 'Intensive three-month program for music enthusiasts',
     },
     {
       title: 'Master Classes',
       date: 'Monthly',
-      description: 'Learn from visiting professional musicians.',
+      description: 'Learn from our professional musicians and instructors.',
     },
   ];
 
@@ -131,14 +137,20 @@ const Services = () => {
           {[
             {
               text: "The instructors at Vivace are exceptional. They've helped me grow tremendously as a musician.",
-              author: "Emily Chen",
-              role: "Piano Student"
+              author: "Alfayo Ateya",
+              role: "Vihiga, Kenya",
             },
             {
               text: "The personalized attention and structured curriculum have made learning music enjoyable and effective.",
-              author: "James Wilson",
-              role: "Guitar Student"
-            }
+              author: "Dan Wamalwa",
+              role: "Mount Kenya University, Thika",
+            },
+            {
+              text: "I enjoyed the content delivery of the classes. Epic!",
+              author: "Shama Bernard",
+              role: "Nairobi Kenya",
+            },
+
           ].map((testimonial, index) => (
             <motion.div
               key={index}
